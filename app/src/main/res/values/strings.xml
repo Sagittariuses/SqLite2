@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SqLite2</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="name">Name</string>
+    <string name="year">Year</string>
+    <string name="user">Add User</string>
+</resources>
