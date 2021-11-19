@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
         // открываем подключение
+        //----------------------------------------------------------------------------------------------------------------------------------------
+        //Вылет
         db = databaseHelper.open();
         //получаем данные из бд в виде курсора
         userCursor = db.rawQuery("select * from " + DatabaseHelper.TABLE, null);
@@ -62,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void add(View view) {
         Intent intent = new Intent(this, User.UserActivity.class);
+        //----------------------------------------------------------------------------------------------------------------------------------------
+        //Вылет  
         startActivity(intent);
     }
 
@@ -122,6 +126,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public SQLiteDatabase open() throws SQLException {
+        //----------------------------------------------------------------------------------------------------------------------------------------
+        //Вылет
         return SQLiteDatabase.openDatabase(DB_PATH, null, SQLiteDatabase.OPEN_READWRITE);
     }
 }
